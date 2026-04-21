@@ -23,11 +23,12 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Build with Gradle
+        working-directory: rtplimit
         run: gradle build
 
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
         with:
           name: rtplimit-mod
-          path: build/libs/rtplimit-*.jar
+          path: rtplimit/build/libs/rtplimit-*.jar
  
